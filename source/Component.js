@@ -43,14 +43,10 @@ var DropSource = DropSource ? DropSource : {};
 		});
 
 		self.element.draggable({
-			drag: function (event, data) {
-				var target = $(event.target);
-				var bounds = self.getDraggableBounds();
 
-				console.log(
-					data.position.top, data.position.left,
-					bounds.top.min, bounds.top.max, bounds.left.min, bounds.left.max
-				);
+			// This deals with constraining the dragging inside the parent's bounds.
+			drag: function (event, data) {
+				var bounds = self.getDraggableBounds();
 
 				if (data.position.top < bounds.top.min) {
 					data.position.top = bounds.top.min;
@@ -67,6 +63,12 @@ var DropSource = DropSource ? DropSource : {};
 				if (data.position.left > bounds.left.max) {
 					data.position.left = bounds.left.max;
 				}
+			},
+
+			// This rebinds the entire thing back through the model to the main data object.
+			stop: function (event, data) {
+				self.frame.top = data.position.top;
+				self.frame.left = data.position.left;
 			}
 		});
 
