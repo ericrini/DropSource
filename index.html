@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%;">
+<head>
+	<title>Component Demonstration</title>
+	<script src="./lib/jquery.min.js"></script>
+	<script src="./lib/jquery-ui.js"></script>
+	<script src="./source/data.js"></script>
+	<script src="./source/Component.js"></script>
+	<script src="./source/ComponentManager.js"></script>
+</head>
+<body style="width: 100%; height: 100%; margin: 0;">
+	<script type="application/javascript">
+		$(document).on('ready', function () {
+			var componentManager = new DropSource.ComponentManager();
+			componentManager.render(data);
+		});
+	</script>
+</body>
+</html>
