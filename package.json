@@ -1,0 +1,22 @@
+{
+  "name": "DropSource",
+  "version": "1.0.0",
+  "description": "A demo project requested for an interview with DropSource. Enjoy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ericrini@github.com/ericrini/DropSource.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericrini/DropSource/issues"
+  },
+  "homepage": "https://github.com/ericrini/DropSource",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
